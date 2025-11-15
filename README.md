@@ -16,7 +16,7 @@ This repository is an **end-to-end analytics pipeline** built on the **modern da
 - Query and store data using **DuckDB** (and Postgres for optional storage)
 - Use **modular, production-ready analytics patterns**
 
-Think of it as a **playground for modern data engineering practices**—but fully functional enough to be production-ready. 😎
+Think of it as a **playground for modern data engineering practices**—but fully functional enough to be production-ready.
 
 ---
 
@@ -42,7 +42,7 @@ Think of it as a **playground for modern data engineering practices**—but full
 
 ---
 
-1. **Project Structure**
+## 📂 Project Structure
 ```
 ├── dags/                 # Airflow DAGs
 ├── dbt/                  # dbt project
@@ -54,7 +54,6 @@ Think of it as a **playground for modern data engineering practices**—but full
 ├── airflow_settings.yaml
 └── README.md
 ```
-
 ---
 
 ## 🚀 Getting Started

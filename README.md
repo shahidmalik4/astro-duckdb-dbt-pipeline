@@ -32,21 +32,6 @@ Think of it as a **playground for modern data engineering practices**—but full
 
 ---
 
-## 🛠 Tech Stack
-
-| Component       | Role / Purpose                                   | Logo |
-|-----------------|-------------------------------------------------|------|
-| **Astro / Airflow** | Workflow orchestration & scheduling           | ![Airflow](https://img.shields.io/badge/Airflow-2.x-orange) |
-| **dbt**         | Data modeling, transformations & testing        | ![dbt](https://img.shields.io/badge/dbt-1.x-red) |
-| **DuckDB**      | Lightweight analytical database for analytics   | ![DuckDB](https://img.shields.io/badge/DuckDB-0.8-green) |
-| **Postgres**    | Optional production-grade database               | ![Postgres](https://img.shields.io/badge/Postgres-15-blue) |
-| **Python**      | Programming language for DAGs & dbt             | ![Python](https://img.shields.io/badge/python-3.11-blue) |
-| **Docker**      | Containerization for reproducibility & deployment | ![Docker](https://img.shields.io/badge/Docker-20-blue) |
-| **pytest**      | Testing Airflow DAGs and dbt transformations    | ![pytest](https://img.shields.io/badge/pytest-7-purple) |
-
----
-
-
 ## ⚡ Features
 
 - Modular **Airflow DAGs** for ETL orchestration
@@ -65,30 +50,19 @@ git clone https://github.com/<your-username>/astro_duckdb_dbt_pipeline.git
 cd astro_duckdb_dbt_pipeline
 ```
 
-1. **Clone the repository**
+1. **Set up the Python environment**
 ```
 python -m venv .env
 source .env/bin/activate   # or .env\Scripts\activate on Windows
 pip install -r requirements.txt
 ```
 
-1. **Clone the repository**
+1. **Run Airflow**
 ```
 astro dev start
 ```
 
-1. **Clone the repository**
-```
-cd dbt/jaffle_shop_duckdb
-dbt run
-dbt test
-```
-
-1. **Clone the repository**
-```
-```
-
-1. **Clone the repository**
+1. **Project Structure**
 ```
 ├── dags/                 # Airflow DAGs
 ├── dbt/                  # dbt project

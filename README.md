@@ -56,7 +56,7 @@ Think of it as a **playground for modern data engineering practices**—but full
 ```
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 1. **Clone the repository**
 ```bash
@@ -64,14 +64,14 @@ git clone https://github.com/<your-username>/astro_duckdb_dbt_pipeline.git
 cd astro_duckdb_dbt_pipeline
 ```
 
-1. **Set up the Python environment**
+2. **Set up the Python environment**
 ```
 python -m venv .env
 source .env/bin/activate   # or .env\Scripts\activate on Windows
 pip install -r requirements.txt
 ```
 
-1. **Run Airflow**
+3. **Run Airflow**
 ```
 astro dev start
 ```

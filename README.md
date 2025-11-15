@@ -1,45 +1,103 @@
-Overview
-========
+# Astro + DuckDB + dbt Pipeline 🚀
 
-Welcome to Astronomer! This project was generated after you ran 'astro dev init' using the Astronomer CLI. This readme describes the contents of the project, as well as how to run Apache Airflow on your local machine.
+[![Python](https://img.shields.io/badge/python-3.11-blue)](https://www.python.org/)
+[![Airflow](https://img.shields.io/badge/airflow-2.x-orange)](https://airflow.apache.org/)
+[![dbt](https://img.shields.io/badge/dbt-1.x-red)](https://www.getdbt.com/)
+[![DuckDB](https://img.shields.io/badge/duckdb-0.8-green)](https://duckdb.org/)
 
-Project Contents
-================
+---
 
-Your Astro project contains the following files and folders:
+## 📊 Project Overview
 
-- dags: This folder contains the Python files for your Airflow DAGs. By default, this directory includes one example DAG:
-    - `example_astronauts`: This DAG shows a simple ETL pipeline example that queries the list of astronauts currently in space from the Open Notify API and prints a statement for each astronaut. The DAG uses the TaskFlow API to define tasks in Python, and dynamic task mapping to dynamically print a statement for each astronaut. For more on how this DAG works, see our [Getting started tutorial](https://www.astronomer.io/docs/learn/get-started-with-airflow).
-- Dockerfile: This file contains a versioned Astro Runtime Docker image that provides a differentiated Airflow experience. If you want to execute other commands or overrides at runtime, specify them here.
-- include: This folder contains any additional files that you want to include as part of your project. It is empty by default.
-- packages.txt: Install OS-level packages needed for your project by adding them to this file. It is empty by default.
-- requirements.txt: Install Python packages needed for your project by adding them to this file. It is empty by default.
-- plugins: Add custom or community plugins for your project to this file. It is empty by default.
-- airflow_settings.yaml: Use this local-only file to specify Airflow Connections, Variables, and Pools instead of entering them in the Airflow UI as you develop DAGs in this project.
+This repository is an **end-to-end analytics pipeline** built on the **modern data stack**, designed using the **Jaffle Shop dataset**. It demonstrates how to:
 
-Deploy Your Project Locally
-===========================
+- Orchestrate workflows with **Astro/Airflow**
+- Transform data with **dbt**
+- Query and store data using **DuckDB** (and Postgres for optional storage)
+- Use **modular, production-ready analytics patterns**
 
-Start Airflow on your local machine by running 'astro dev start'.
+Think of it as a **playground for modern data engineering practices**—but fully functional enough to be production-ready. 😎
 
-This command will spin up five Docker containers on your machine, each for a different Airflow component:
+---
 
-- Postgres: Airflow's Metadata Database
-- Scheduler: The Airflow component responsible for monitoring and triggering tasks
-- DAG Processor: The Airflow component responsible for parsing DAGs
-- API Server: The Airflow component responsible for serving the Airflow UI and API
-- Triggerer: The Airflow component responsible for triggering deferred tasks
+## 🛠 Tech Stack
 
-When all five containers are ready the command will open the browser to the Airflow UI at http://localhost:8080/. You should also be able to access your Postgres Database at 'localhost:5432/postgres' with username 'postgres' and password 'postgres'.
+| Component       | Purpose                                   |
+|-----------------|-------------------------------------------|
+| Astro/Airflow   | Workflow orchestration & scheduling       |
+| dbt             | Data modeling & transformations           |
+| DuckDB          | Lightweight analytical database           |
+| Postgres        | Optional production database              |
+| Docker          | Containerization for reproducibility      |
 
-Note: If you already have either of the above ports allocated, you can either [stop your existing Docker containers or change the port](https://www.astronomer.io/docs/astro/cli/troubleshoot-locally#ports-are-not-available-for-my-local-airflow-webserver).
+---
 
-Deploy Your Project to Astronomer
-=================================
+## 🛠 Tech Stack
 
-If you have an Astronomer account, pushing code to a Deployment on Astronomer is simple. For deploying instructions, refer to Astronomer documentation: https://www.astronomer.io/docs/astro/deploy-code/
+| Component       | Role / Purpose                                   | Logo |
+|-----------------|-------------------------------------------------|------|
+| **Astro / Airflow** | Workflow orchestration & scheduling           | ![Airflow](https://img.shields.io/badge/Airflow-2.x-orange) |
+| **dbt**         | Data modeling, transformations & testing        | ![dbt](https://img.shields.io/badge/dbt-1.x-red) |
+| **DuckDB**      | Lightweight analytical database for analytics   | ![DuckDB](https://img.shields.io/badge/DuckDB-0.8-green) |
+| **Postgres**    | Optional production-grade database               | ![Postgres](https://img.shields.io/badge/Postgres-15-blue) |
+| **Python**      | Programming language for DAGs & dbt             | ![Python](https://img.shields.io/badge/python-3.11-blue) |
+| **Docker**      | Containerization for reproducibility & deployment | ![Docker](https://img.shields.io/badge/Docker-20-blue) |
+| **pytest**      | Testing Airflow DAGs and dbt transformations    | ![pytest](https://img.shields.io/badge/pytest-7-purple) |
 
-Contact
-=======
+---
 
-The Astronomer CLI is maintained with love by the Astronomer team. To report a bug or suggest a change, reach out to our support.
+
+## ⚡ Features
+
+- Modular **Airflow DAGs** for ETL orchestration
+- dbt project structured with **staging + marts**
+- Seed data included for quick experimentation
+- Dockerized environment for **zero hassle setup**
+- Full **tests** for DAGs and transformations
+
+---
+
+## 🚀 Getting Started
+
+1. **Clone the repository**
+```bash
+git clone https://github.com/<your-username>/astro_duckdb_dbt_pipeline.git
+cd astro_duckdb_dbt_pipeline
+```
+
+1. **Clone the repository**
+```
+python -m venv .env
+source .env/bin/activate   # or .env\Scripts\activate on Windows
+pip install -r requirements.txt
+```
+
+1. **Clone the repository**
+```
+astro dev start
+```
+
+1. **Clone the repository**
+```
+cd dbt/jaffle_shop_duckdb
+dbt run
+dbt test
+```
+
+1. **Clone the repository**
+```
+```
+
+1. **Clone the repository**
+```
+├── dags/                 # Airflow DAGs
+├── dbt/                  # dbt project
+│   └── jaffle_shop_duckdb
+├── include/              # DuckDB files
+├── tests/                # Unit & integration tests
+├── Dockerfile
+├── docker-compose.yml
+├── airflow_settings.yaml
+└── README.md
+```
+

@@ -1,0 +1,34 @@
+1. airflow_settings.yml
+
+# This file allows you to configure Airflow Connections, Pools, and Variables in a single place for local development only.
+# NOTE: json dicts can be added to the conn_extra field as yaml key value pairs. See the example below.
+
+# For more information, refer to our docs: https://www.astronomer.io/docs/astro/cli/develop-project#configure-airflow_settingsyaml-local-development-only
+# For questions, reach out to: https://support.astronomer.io
+# For issues create an issue ticket here: https://github.com/astronomer/astro-cli/issues
+airflow:
+  connections:
+    - conn_id: postgres_local        # your connection ID
+      conn_type: postgres            # connection type
+      conn_host: host.docker.internal  # allows Dockerized Airflow to reach local Postgres
+      conn_schema: test_db           # replace with your database name
+      conn_login: postgres          # Postgres username
+      conn_password: postgres       # Postgres password
+      conn_port: 5432                # Postgres default port
+      conn_extra: {}                 # optional extra JSON, leave empty if not needed
+  pools:
+    - pool_name:
+      pool_slot:
+      pool_description:
+  variables:
+    - variable_name:
+      variable_value:
+
+
+2. .env
+
+AIRFLOW_CONN_DUCKDB_DEFAULT='{
+	"conn_type": "duckdb",
+	"host": "/usr/local/airflow/include/jaffle_shop.duckdb",
+	"schema": "main",
+}'

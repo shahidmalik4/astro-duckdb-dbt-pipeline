@@ -42,6 +42,21 @@ Think of it as a **playground for modern data engineering practices**—but full
 
 ---
 
+1. **Project Structure**
+```
+├── dags/                 # Airflow DAGs
+├── dbt/                  # dbt project
+│   └── jaffle_shop_duckdb
+├── include/              # DuckDB files
+├── tests/                # Unit & integration tests
+├── Dockerfile
+├── docker-compose.yml
+├── airflow_settings.yaml
+└── README.md
+```
+
+---
+
 ## 🚀 Getting Started
 
 1. **Clone the repository**
@@ -60,18 +75,5 @@ pip install -r requirements.txt
 1. **Run Airflow**
 ```
 astro dev start
-```
-
-1. **Project Structure**
-```
-├── dags/                 # Airflow DAGs
-├── dbt/                  # dbt project
-│   └── jaffle_shop_duckdb
-├── include/              # DuckDB files
-├── tests/                # Unit & integration tests
-├── Dockerfile
-├── docker-compose.yml
-├── airflow_settings.yaml
-└── README.md
 ```
 

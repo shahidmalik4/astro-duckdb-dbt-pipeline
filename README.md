@@ -1,4 +1,4 @@
-# Astro + DuckDB + dbt Pipeline 🚀
+# Astro + DuckDB + dbt Pipeline
 
 [![Python](https://img.shields.io/badge/python-3.11-blue)](https://www.python.org/)
 [![Airflow](https://img.shields.io/badge/airflow-2.x-orange)](https://airflow.apache.org/)

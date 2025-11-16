@@ -60,7 +60,7 @@ Think of it as a **playground for modern data engineering practices**—but full
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/<your-username>/astro_duckdb_dbt_pipeline.git
+git clone https://github.com/shahidmalik4/astro_duckdb_dbt_pipeline.git
 cd astro_duckdb_dbt_pipeline
 ```
 

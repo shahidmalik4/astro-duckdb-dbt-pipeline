@@ -4,6 +4,7 @@
 [![Airflow](https://img.shields.io/badge/airflow-2.x-orange)](https://airflow.apache.org/)
 [![dbt](https://img.shields.io/badge/dbt-1.x-red)](https://www.getdbt.com/)
 [![DuckDB](https://img.shields.io/badge/duckdb-0.8-green)](https://duckdb.org/)
+[![Astronomer](https://img.shields.io/badge/Astronomer-lightgray?style=flat&logo=ApacheAirflow&logoColor=blue)](https://www.astronomer.io/)
 
 ---
 
@@ -60,7 +61,7 @@ Think of it as a **playground for modern data engineering practices**—but full
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/shahidmalik4/astro_duckdb_dbt_pipeline.git
+git clone https://github.com/shahidmalik4/astro-duckdb-dbt-pipeline.git
 cd astro_duckdb_dbt_pipeline
 ```
 

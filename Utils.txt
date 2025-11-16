@@ -1,4 +1,4 @@
-1. airflow_settings.yml
+1. Create airflow_settings.yml file and paste this code.
 
 # This file allows you to configure Airflow Connections, Pools, and Variables in a single place for local development only.
 # NOTE: json dicts can be added to the conn_extra field as yaml key value pairs. See the example below.
@@ -25,7 +25,7 @@ airflow:
       variable_value:
 
 
-2. .env
+2. Create .env file and paste this code
 
 AIRFLOW_CONN_DUCKDB_DEFAULT='{
 	"conn_type": "duckdb",

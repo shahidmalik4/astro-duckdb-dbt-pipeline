@@ -1,0 +1,7 @@
+jaffle_shop:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: /usr/local/airflow/include/jaffle_shop.duckdb
+      threads: 2

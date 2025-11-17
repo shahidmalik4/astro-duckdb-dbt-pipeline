@@ -1,4 +1,4 @@
-from cosmos import ProjectConfig, ProfileConfig, DbtDag, ExecutionConfig, RenderConfig # 👈 IMPORT RenderConfig
+from cosmos import ProjectConfig, ProfileConfig, DbtDag, ExecutionConfig, RenderConfig
 from cosmos.profiles.duckdb import DuckDBUserPasswordProfileMapping
 from cosmos.profiles.postgres import PostgresUserPasswordProfileMapping
 from datetime import datetime
@@ -18,7 +18,7 @@ _project_config = ProjectConfig(dbt_project_path=DBT_PROJECT_PATH)
 _execution_config = ExecutionConfig(dbt_executable_path=DBT_EXECUTABLE_PATH)
 
 # --- Shared Render Configuration ---
-_render_config = RenderConfig( # 👈 EXPLICITLY DEFINED RenderConfig object
+_render_config = RenderConfig(
     dbt_models_dir=os.path.join(DBT_PROJECT_PATH, "models"),
     load_method="dbt_ls",
 )
@@ -59,7 +59,7 @@ with DAG(
         profile_config=duckdb_profile_config, 
         execution_config=_execution_config,
         default_args={"models": "config.materialized:seed"}, 
-        render_config=_render_config, # 👈 Passed the object
+        render_config=_render_config,
     )
 
     # 2. TaskGroup to Build Clean Models (Staging/Marts) into PostgreSQL
@@ -69,7 +69,7 @@ with DAG(
         profile_config=postgres_profile_config, 
         execution_config=_execution_config,
         default_args={"exclude": "config.materialized:seed"}, 
-        render_config=_render_config, # 👈 Passed the object
+        render_config=_render_config,
     )
     
     # Define the dependency flow
